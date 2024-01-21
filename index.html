@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript colorChanger() Hands-On</title>
+
+
+    <style>
+        div {
+            background-color: skyblue;
+            Width: 300px;
+            border: 100px solid;
+            padding: 0px;
+            margin: 20px;
+            margin-left: 430px;
+        }
+        h1 { 
+            color: #111; 
+            font-family: 'Helvetica Neue', sans-serif; 
+            font-size: 50px; font-weight: bold; 
+            letter-spacing: -1px; 
+            line-height: 1; 
+            text-align: center; 
+            }
+
+        body{
+                background-color: skyblue;
+                text-align: center;
+            
+            }
+
+        button{
+                width: 130px;
+                height: 40px;
+                color: papayawhip;
+                border-radius: 5px;
+                padding: 10px 25px;
+                font-family:'Helvetica Neue', sans-serif;
+                font-weight: bold;
+                background:transparent;
+                cursor: pointer;
+                position: relative;
+                display: inline-block;
+                box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+                7px 7px 20px 0px rgba(0,0,0,.1),
+                4px 4px 5px 0px rgba(0,0,0,.1);
+                outline: none;
+            }
+        button{
+                background: skyblue;
+                background: linear-gradient(0deg, rgb(255, 208, 0) 0%, rgba(255, 208, 0) 100%);
+                border: none;
+            }
+
+        button:before {
+                height: 0%;
+                width: 2px;
+            }
+
+        button:hover {
+                box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+                inset -4px -4px 6px 0 rgba(255,255,255,.2),
+                inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+            }
+    </style>
+</head>
+<h1>JavaScript colorChanger() Hands-On</h1>
+<body>
+
+    <button id="colorButton">!Click Here!</button>
+    </br>
+    </br>
+    <div id="colorDiv"></div>
+
+    <script>
+        function colorChange() {
+            var colorDiv = document.getElementById("colorDiv");
+
+            
+            if (colorDiv.style.color === "green") {
+                colorDiv.style.color = "blue";
+            } else {
+                colorDiv.style.color = "green";
+            }
+        }
+
+        document.getElementById("colorButton").addEventListener("click", colorChange);
+    </script>
+</body>
+</html>
